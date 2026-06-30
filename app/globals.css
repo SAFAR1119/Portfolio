@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root{
+
+    --background:#ffffff;
+
+    --foreground:#111111;
+
+}
+
+.dark{
+
+    --background:#09090b;
+
+    --foreground:#fafafa;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--foreground);
+
+    transition:.3s;
+
+}
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  transition: all 0.3s ease;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+/* Smooth Animation */
+
+* {
+  transition:
+    background-color .3s,
+    color .3s,
+    border-color .3s;
+}
+
+/* Beautiful Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
