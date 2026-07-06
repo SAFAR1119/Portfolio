@@ -11,15 +11,16 @@ Currently I'm focusing on becoming a professional Software Engineer while contin
 
   education: {
     degree: "B.Sc. in Computer Science & Engineering",
-    university: "Your University Name",
-    year: "2023 - Present",
+    university: "American International University-Bangladesh (AIUB)",
+    year: "2019 - 2025",
   },
 
   location: "Dhaka, Bangladesh",
 
   languages: [
     "English",
-    "Bangla"
+    "Bangla",
+    "Hindi"
   ],
 
   interests: [
@@ -34,6 +35,7 @@ Currently I'm focusing on becoming a professional Software Engineer while contin
     "Spring Boot",
     "Docker",
     "AWS",
+    "Figma",
     "System Design"
   ]
 };
