@@ -4,353 +4,233 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 import {
   Download,
   Mail,
-  ArrowDown,
+  ArrowRight,
 } from "lucide-react";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 import { personal } from "../../data/personal";
 
 export default function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative overflow-hidden py-28"
+    >
+      {/* Background Glow */}
 
-return (
+      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
 
-<section
-className="
-relative
-min-h-screen
-flex
-items-center
-overflow-hidden
-"
+      <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
+
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+
+        {/* LEFT */}
+
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
+
+          <p className="font-semibold uppercase tracking-[0.3em] text-blue-500">
+            Hello, I'm
+          </p>
+
+          <h1 className="mt-5 text-6xl font-black leading-tight">
+            {personal.name}
+          </h1>
+
+          <div className="mt-6 text-3xl font-bold text-blue-500">
+
+            <TypeAnimation
+              sequence={[
+                ...personal.roles.flatMap((role) => [role, 1800]),
+              ]}
+              speed={50}
+              repeat={Infinity}
+            />
+
+          </div>
+
+          <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
+            {personal.about}
+          </p>
+
+          {/* Status */}
+
+          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-green-500/20 bg-green-500/10 px-5 py-3">
+
+            <span className="h-3 w-3 animate-pulse rounded-full bg-green-500" />
+
+            <span className="text-green-400">
+              Available for Software Engineering Opportunities
+            </span>
+
+          </div>
+
+          {/* Buttons */}
+
+          <div className="mt-10 flex flex-wrap gap-4">
+
+            <Link
+              href={personal.resume}
+              className="flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:scale-105 hover:bg-blue-700"
+            >
+              <Download size={18} />
+              Resume
+            </Link>
+
+            <Link
+              href="#projects"
+              className="flex items-center gap-2 rounded-xl border border-white/10 px-6 py-3 transition hover:border-blue-500"
+            >
+              View Projects
+              <ArrowRight size={18} />
+            </Link>
+
+          </div>
+
+          {/* Social */}
+
+          <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-14 grid grid-cols-3 gap-5"
 >
 
-{/* Background */}
+          <Stat number="10+" label="Months Experience" />
 
-<div
-className="
-absolute
-left-1/2
-top-0
-h-[600px]
-w-[600px]
--translate-x-1/2
-rounded-full
-bg-blue-600/20
-blur-[150px]
-"
-/>
+         <Stat number="3+" label="Projects Built" />
 
-<div
-className="
-mx-auto
-grid
-max-w-7xl
-grid-cols-1
-items-center
-gap-20
-px-6
-lg:grid-cols-2
-"
+          <Stat number="100%" label="Responsive" />
+
+         </motion.div>
+
+          <div className="mt-10 flex gap-5">
+
+            <Link href={personal.github} target="_blank">
+              <FaGithub className="text-3xl transition hover:text-blue-500" />
+            </Link>
+
+            <Link href={personal.linkedin} target="_blank">
+              <FaLinkedin className="text-3xl transition hover:text-blue-500" />
+            </Link>
+
+            <Link href={`mailto:${personal.email}`}>
+              <Mail className="h-8 w-8 transition hover:text-blue-500" />
+            </Link>
+
+          </div>
+
+        </motion.div>
+
+        {/* RIGHT */}
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex justify-center"
+        >
+
+          <div className="relative">
+            <motion.div
+           animate={{ y: [-10, 10, -10] }}
+           transition={{ duration: 4, repeat: Infinity }}
+            className="absolute -left-10 top-10 rounded-xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-xl"
 >
+   ☕ Java
+ </motion.div>
 
-{/* Left */}
-
-<motion.div
-
-initial={{opacity:0,x:-50}}
-
-animate={{opacity:1,x:0}}
-
-transition={{duration:.8}}
-
+  <motion.div
+  animate={{ y: [10, -10, 10] }}
+  transition={{ duration: 5, repeat: Infinity }}
+  className="absolute -right-28 top-24 rounded-xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-xl"
 >
+  🍃 Spring Boot
+  </motion.div>
 
-{personal.available && (
-
-<div
-className="
-mb-6
-inline-flex
-items-center
-gap-2
-rounded-full
-border
-border-green-500/30
-bg-green-500/10
-px-4
-py-2
-text-sm
-"
+  <motion.div
+  animate={{ y: [-8, 8, -8] }}
+  transition={{ duration: 6, repeat: Infinity }}
+  className="absolute -left-15 bottom-12 rounded-xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-xl"
 >
+  ⚛ Next.js
+ </motion.div>
 
-<div className="h-2 w-2 rounded-full bg-green-500"/>
-
-Available for Internship
-
-</div>
-
-)}
-
-<h1
-className="
-text-6xl
-font-black
-leading-tight
-lg:text-7xl
-"
+  <motion.div
+  animate={{ y: [8, -8, 8] }}
+  transition={{ duration: 5, repeat: Infinity }}
+  className="absolute -right-18 bottom-10 rounded-xl border border-white/10 bg-white/10 px-4 py-2 backdrop-blur-xl"
 >
+  🗄 MySQL
+  </motion.div>
 
-Hi,
+           <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500/30 via-cyan-500/20 to-purple-500/30 blur-[80px]" />
 
-I'm
+            <div className="relative rounded-full border-4 border-blue-500 p-2 shadow-2xl">
 
-<span className="text-blue-500">
+              <Image
+                src={personal.profile}
+                alt={personal.name}
+                width={380}
+                height={380}
+                priority
+                className="rounded-full object-cover"
+              />
 
-{" "}
+            </div>
 
-{personal.name}
+          </div>
 
-</span>
+        </motion.div>
 
-</h1>
-
-<p
-className="
-mt-6
-text-xl
-text-zinc-500
-"
+      </div>
+      <motion.div
+       animate={{ y: [0, 12, 0] }}
+       transition={{ repeat: Infinity, duration: 2 }}
+       className="mt-20 flex justify-center"
 >
-
-{personal.subtitle}
-
-</p>
-
-<div className="mt-10 flex flex-wrap gap-4">
-
-<Link
-
-href={personal.resume}
-
-target="_blank"
-
-className="
-rounded-xl
-bg-blue-600
-px-6
-py-3
-font-semibold
-text-white
-transition
-hover:scale-105
-"
-
->
-
-<span className="flex items-center gap-2">
-
-<Download size={18}/>
-
-Resume
-
-</span>
-
-</Link>
-
-<Link
-
-href={personal.github}
-
-target="_blank"
-
-className="
-rounded-xl
-border
-px-6
-py-3
-transition
-hover:bg-white/5
-"
-
->
-
-<span className="flex items-center gap-2">
-
-<FaGithub size={18}/>
-
-GitHub
-
-</span>
-
-</Link>
-
-<Link
-
-href={personal.linkedin}
-
-target="_blank"
-
-className="
-rounded-xl
-border
-px-6
-py-3
-transition
-hover:bg-white/5
-"
-
->
-
-<span className="flex items-center gap-2">
-
-<FaLinkedin size={18}/>
-
-LinkedIn
-
-</span>
-
-</Link>
-
-</div>
-
-<div className="mt-16 grid grid-cols-2 gap-8 lg:grid-cols-4">
-
-<div>
-
-<h2 className="text-3xl font-bold">
-
-{personal.stats.projects}
-
-</h2>
-
-<p className="text-zinc-500">
-
-Projects
-
-</p>
-
-</div>
-
-<div>
-
-<h2 className="text-3xl font-bold">
-
-{personal.stats.technologies}
-
-</h2>
-
-<p className="text-zinc-500">
-
-Technologies
-
-</p>
-
-</div>
-
-<div>
-
-<h2 className="text-3xl font-bold">
-
-{personal.stats.experience}
-
-</h2>
-
-<p className="text-zinc-500">
-
-Years
-
-</p>
-
-</div>
-
-<div>
-
-<h2 className="text-3xl font-bold">
-
-100%
-
-</h2>
-
-<p className="text-zinc-500">
-
-Passion
-
-</p>
-
-</div>
-
-</div>
-
-</motion.div>
-
-{/* Right */}
-
-<motion.div
-
-initial={{opacity:0,x:50}}
-
-animate={{opacity:1,x:0}}
-
-transition={{duration:.8}}
-
-className="flex justify-center"
-
->
-
-<div
-className="
-relative
-h-[420px]
-w-[420px]
-overflow-hidden
-rounded-full
-border-4
-border-blue-500/20
-shadow-2xl
-"
->
-
-<Image
-
-src="/images/profile.webp"
-
-alt="Safar Ahmed"
-
-fill
-
-priority
-
-className="object-cover"
-
-/>
-
-</div>
-
-</motion.div>
-
-</div>
-
-<div
-className="
-absolute
-bottom-8
-left-1/2
--translate-x-1/2
-animate-bounce
-"
->
-
-<ArrowDown/>
-
-</div>
-
-</section>
-
-);
-
+     <a
+        href="#about"
+        className="flex flex-col items-center text-zinc-500 transition hover:text-blue-500"
+  >
+        <span className="mb-2 text-sm uppercase tracking-widest">
+     Scroll
+      </span>
+
+     <div className="h-12 w-6 rounded-full border border-white/20">
+      <div className="mx-auto mt-2 h-2 w-2 rounded-full bg-blue-500" />
+     </div>
+     </a>
+     </motion.div>
+    </section>
+  );
+
+  type StatProps = {
+  number: string;
+  label: string;
+};
+
+function Stat({ number, label }: StatProps) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-xl transition hover:border-blue-500/40 hover:-translate-y-1">
+      <h3 className="text-3xl font-black text-blue-500">
+        {number}
+      </h3>
+
+      <p className="mt-2 text-sm text-zinc-400">
+        {label}
+      </p>
+    </div>
+  );
+}
 }

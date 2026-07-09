@@ -37,3 +37,67 @@ export const timeline = [
       "Building production-ready applications with Next.js, NestJS, Spring Boot, and preparing for internships and software engineering roles.",
   },
 ];
+
+export const experiences = [
+  {
+    company: "Fleeting Trails",
+
+    role: "Java Backend Developer",
+
+    duration: "November 2025 –  Current year",
+
+    period: "Ongoing",
+
+    promoted: true,
+
+    description: [
+      "Developed production-ready REST APIs using Java Spring Boot.",
+      "Designed scalable backend modules for enterprise applications.",
+      "Integrated MySQL using Spring Data JPA and Hibernate.",
+      "Worked in Agile sprint planning, code reviews and feature implementation.",
+      "Collaborated closely with frontend developers and QA engineers.",
+      "Optimized API performance and improved database queries.",
+    ],
+
+    tech: [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Hibernate",
+      "JPA",
+      "Git",
+      "Maven",
+      "Postman",
+    ],
+  },
+
+  {
+    company: "Fleeting Trails",
+
+    role: "Java Full Stack Developer Intern",
+
+    duration: "June 2025 – November 2025",
+
+    period: "6 Months",
+
+    promoted: false,
+
+    description: [
+      "Built REST APIs using Spring Boot.",
+      "Implemented CRUD operations for multiple modules.",
+      "Integrated MySQL databases using JPA.",
+      "Used Git for version control.",
+      "Participated in daily Scrum meetings.",
+      "Fixed bugs and implemented requested features.",
+    ],
+
+    tech: [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Git",
+      "Maven",
+      "Postman",
+    ],
+  },
+];

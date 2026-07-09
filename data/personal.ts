@@ -1,27 +1,25 @@
 export const personal = {
   name: "Safar Ahmed",
 
-  title: "Software Engineer",
-
-  subtitle:
-    "Building scalable web applications with Next.js, Spring Boot, NestJS and TypeScript.",
+  location: "Dhaka, Bangladesh",
 
   email: "safarahmed11@gmail.com",
 
   github: "https://github.com/SAFAR1119",
 
-  linkedin: "https://linkedin.com/in/safar-ahmed",
+  linkedin: "https://linkedin.com/in/safar-ahmed-09b025292",
 
   resume: "/resume.pdf",
 
-  location: "Dhaka, Bangladesh",
+  profile: "/images/profile.webp",
 
-  available: true,
+  about:
+    "Full Stack Developer specializing in Java Spring Boot and modern web technologies with experience building scalable REST APIs, secure authentication systems, and responsive web applications.",
 
-  stats: {
-    experience: "1+",
-    projects: "15+",
-    technologies: "12+",
-    clients: "Future",
-  },
+  roles: [
+    "Java Backend Developer",
+    "Spring Boot Developer",
+    "Full Stack Developer",
+    "Next.js Developer",
+  ],
 };

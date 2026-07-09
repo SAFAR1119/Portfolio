@@ -54,12 +54,12 @@ export default function Navbar() {
                 href={`#${item.toLowerCase()}`}
                 className="
                 relative
-                transition
                 hover:text-blue-500
+                transition-colors
                 after:absolute
                 after:left-0
                 after:-bottom-1
-                after:h-[2px]
+                after:h-0.5
                 after:w-0
                 after:bg-blue-500
                 after:transition-all
