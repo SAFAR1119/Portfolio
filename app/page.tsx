@@ -7,10 +7,12 @@ import Experience from "../components/home/Experience";
 import GithubStats from "../components/home/GithubStats";
 import Contact from "../components/home/Contact";
 import Footer from "../components/layout/Footer";
+import ScrollProgress from "../components/layout/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress /> 
       <Navbar />
       <Hero />
       <About />

@@ -28,7 +28,7 @@ export default function Experience() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-zinc-500">
-            10+ months of professional experience building backend applications
+            10+ months of professional experience building Full Stack applications
             using Java Spring Boot, REST APIs, MySQL and modern software
             development practices.
           </p>

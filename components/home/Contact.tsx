@@ -38,7 +38,7 @@ export default function Contact() {
           </p>
 
           <h2 className="mt-3 text-5xl font-black">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
 
           <p className="mt-6 max-w-2xl text-zinc-500">
