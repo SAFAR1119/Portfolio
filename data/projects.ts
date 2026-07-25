@@ -52,7 +52,7 @@ export const projects = [
     description:
       "Developed a full-stack e-commerce web application using Spring Boot for the backend and Thymeleaf with CSS for the frontend to manage product listings and customer shopping activities. Implemented service-layer logic using OOPprinciples in Java, ensuring modularity andreusability.",
 
-    image: "/images/projects/coming-soon.png",
+    image: "/images/projects/mart.png",
 
     github: "https://github.com/SAFAR1119/bajarbd-family-mart",
 
