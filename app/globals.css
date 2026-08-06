@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f3ed;
-  --foreground: #1c1c1a;
-  --muted: #686761;
-  --line: #d9d5cc;
-  --accent: #c84d2f;
-  --surface: #fbfaf7;
+  --background: #f5f7ff;
+  --foreground: #17213d;
+  --muted: #5f6885;
+  --line: #d9def1;
+  --accent: #6d4aff;
+  --accent-strong: #4930ca;
+  --surface: #ffffff;
+  --surface-raised: #eef1ff;
 }
 
 .dark {
-  --background: #171715;
-  --foreground: #f1eee7;
-  --muted: #aaa69d;
-  --line: #3b3935;
-  --accent: #f07a58;
-  --surface: #201f1c;
+  --background: #0d1020;
+  --foreground: #f4f5ff;
+  --muted: #abb4d4;
+  --line: #2a3154;
+  --accent: #9d8cff;
+  --accent-strong: #c3b9ff;
+  --surface: #151a31;
+  --surface-raised: #1b2140;
 }
 
 html { scroll-behavior: smooth; }
@@ -28,7 +32,7 @@ body {
   transition: background-color .25s ease, color .25s ease;
 }
 
-::selection { background: var(--accent); color: white; }
+::selection { background: var(--accent); color: #ffffff; }
 
 a, button { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
 
@@ -53,6 +57,31 @@ a, button { transition: color .2s ease, background-color .2s ease, border-color 
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: 4px 4px 0 color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.mobile-menu-panel {
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  border-color: var(--line);
+  color: var(--foreground);
+  box-shadow: -20px 0 50px color-mix(in srgb, #050817 45%, transparent);
+}
+
+.mobile-menu-link {
+  border-bottom: 1px solid var(--line);
+  color: var(--foreground);
+}
+
+.mobile-menu-link:hover { color: var(--accent); }
+
+.theme-toggle {
+  border-color: var(--line);
+  background: var(--surface-raised);
+  color: var(--foreground);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 ::-webkit-scrollbar { width: 9px; }

@@ -25,12 +25,7 @@ export default function ThemeToggle() {
             }
 
             className="
-            rounded-full
-            border
-            border-zinc-700
-            p-2
-            transition
-            hover:scale-110
+            theme-toggle rounded-full border p-2 transition hover:scale-110
             "
 
         >

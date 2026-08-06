@@ -17,7 +17,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white dark:border-white/10 dark:bg-black/30">
+    <footer className="border-t" style={{ borderColor: "var(--line)", backgroundColor: "var(--surface)" }}>
       <div className="mx-auto max-w-7xl px-6 py-12">
 
         <motion.div
@@ -29,11 +29,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-black text-white">
+            <h2 className="text-2xl font-black">
               Safar Ahmed
             </h2>
 
-            <p className="mt-4 text-zinc-600 dark:text-zinc-400 leading-7">
+            <p className="mt-4 leading-7" style={{ color: "var(--muted)" }}>
               Software Engineer passionate about building scalable,
               modern and user-friendly web applications.
             </p>
@@ -50,7 +50,8 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-zinc-600 transition hover:text-blue-500 dark:text-zinc-400 dark:hover:text-blue-500"
+                    className="transition hover:text-[var(--accent)]"
+                    style={{ color: "var(--muted)" }}
                   >
                     {link.name}
                   </Link>
@@ -70,7 +71,8 @@ export default function Footer() {
               <Link
                 href={contact.github}
                 target="_blank"
-                className="rounded-xl border border-zinc-200 dark:border-white/10 p-3 transition hover:border-blue-500 hover:bg-blue-500/10"
+                className="rounded-xl border p-3 transition hover:border-[var(--accent)] hover:bg-[var(--surface-raised)]"
+                style={{ borderColor: "var(--line)" }}
               >
                 <FaGithub size={22} />
               </Link>
@@ -78,14 +80,15 @@ export default function Footer() {
               <Link
                 href={contact.linkedin}
                 target="_blank"
-                className="rounded-xl border border-zinc-200 dark:border-white/10 p-3 transition hover:border-blue-500 hover:bg-blue-500/10"
+                className="rounded-xl border p-3 transition hover:border-[var(--accent)] hover:bg-[var(--surface-raised)]"
+                style={{ borderColor: "var(--line)" }}
               >
                 <FaLinkedin size={22} />
               </Link>
 
             </div>
 
-            <p className="mt-6 text-zinc-600 dark:text-zinc-400 break-all">
+            <p className="mt-6 break-all" style={{ color: "var(--muted)" }}>
               {contact.email}
             </p>
 
@@ -94,15 +97,16 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-zinc-200 pt-8 dark:border-white/10 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t pt-8 md:flex-row" style={{ borderColor: "var(--line)" }}>
 
-          <p className="text-sm text-zinc-500 dark:text-zinc-500">
+          <p className="text-sm" style={{ color: "var(--muted)" }}>
             © {new Date().getFullYear()} Safar Ahmed. All Rights Reserved.
           </p>
 
           <Link
             href="#"
-            className="rounded-full bg-blue-600 p-3 text-white transition hover:scale-110 hover:bg-blue-700"
+            className="rounded-full p-3 text-white transition hover:scale-110"
+            style={{ backgroundColor: "var(--accent)" }}
           >
             <ArrowUp size={18} />
           </Link>
