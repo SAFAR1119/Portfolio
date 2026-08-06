@@ -1,81 +1,59 @@
 @import "tailwindcss";
 
-:root{
-
-    --background:#ffffff;
-
-    --foreground:#111111;
-
+:root {
+  --background: #f6f3ed;
+  --foreground: #1c1c1a;
+  --muted: #686761;
+  --line: #d9d5cc;
+  --accent: #c84d2f;
+  --surface: #fbfaf7;
 }
 
-.dark{
-
-    --background:#09090b;
-
-    --foreground:#fafafa;
-
+.dark {
+  --background: #171715;
+  --foreground: #f1eee7;
+  --muted: #aaa69d;
+  --line: #3b3935;
+  --accent: #f07a58;
+  --surface: #201f1c;
 }
 
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-body{
-
-    background:var(--background);
-
-    color:var(--foreground);
-
-    transition:.3s;
-
-}
-
-::selection{
-
-    background:#2563eb;
-
-    color:white;
-
-}
+html { scroll-behavior: smooth; }
 
 body {
   overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color .25s ease, color .25s ease;
 }
 
-nav {
-  transition: all 0.3s ease;
+::selection { background: var(--accent); color: white; }
+
+a, button { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
+
+.site-shell { background-image: linear-gradient(to right, transparent calc(50% - 1px), color-mix(in srgb, var(--line) 55%, transparent) calc(50%), transparent calc(50% + 1px)); }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
-a {
-  transition: all 0.3s ease;
+.section-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.35rem, 5vw, 4.6rem);
+  letter-spacing: -.055em;
+  line-height: .95;
 }
 
-/* Smooth Animation */
-
-* {
-  transition:
-    background-color .3s,
-    color .3s,
-    border-color .3s;
+.paper-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--line) 70%, transparent);
 }
 
-/* Beautiful Scrollbar */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2563eb;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
-}
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-thumb { background: var(--accent); }

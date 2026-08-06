@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-7xl px-6 py-32"
+      className="mx-auto max-w-7xl px-6 py-24 lg:px-10 sm:py-32"
     >
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -15,15 +15,15 @@ export default function About() {
         transition={{ duration: .6 }}
         viewport={{ once: true }}
       >
-        <p className="text-blue-500 font-semibold uppercase tracking-[0.2em]">
+        <p className="eyebrow">
           About Me
         </p>
 
-        <h2 className="mt-3 text-5xl font-bold">
+        <h2 className="section-title mt-4">
           {about.title}
         </h2>
 
-        <p className="mt-8 max-w-3xl leading-8 text-zinc-500 whitespace-pre-line">
+        <p className="mt-8 max-w-3xl whitespace-pre-line text-lg leading-8" style={{ color: "var(--muted)" }}>
           {about.description}
         </p>
       </motion.div>
@@ -35,9 +35,9 @@ export default function About() {
           whileInView={{ opacity:1,x:0 }}
           transition={{ duration:.6 }}
           viewport={{ once:true }}
-          className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+          className="paper-card p-7"
         >
-          <h3 className="text-2xl font-semibold">
+          <h3 className="font-serif text-3xl tracking-tight">
             Education
           </h3>
 
@@ -46,11 +46,11 @@ export default function About() {
               {about.education.degree}
             </p>
 
-            <p className="text-zinc-500">
+            <p style={{ color: "var(--muted)" }}>
               {about.education.university}
             </p>
 
-            <p className="text-blue-500">
+            <p className="font-medium" style={{ color: "var(--accent)" }}>
               {about.education.year}
             </p>
           </div>
@@ -61,9 +61,9 @@ export default function About() {
           whileInView={{ opacity:1,x:0 }}
           transition={{ duration:.6 }}
           viewport={{ once:true }}
-          className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+          className="paper-card p-7"
         >
-          <h3 className="text-2xl font-semibold">
+          <h3 className="font-serif text-3xl tracking-tight">
             Currently Learning
           </h3>
 
@@ -71,7 +71,7 @@ export default function About() {
             {about.currentlyLearning.map((item) => (
               <span
                 key={item}
-                className="rounded-full bg-blue-600/10 px-4 py-2 text-sm text-blue-500"
+                className="border px-3 py-1.5 text-sm" style={{ borderColor: "var(--line)", color: "var(--muted)" }}
               >
                 {item}
               </span>

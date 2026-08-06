@@ -1,88 +1,58 @@
 export const projects = [
   {
+    title: "Employee Management System (HRM Portal)",
+    featured: true,
+    description:
+      "A full-stack HRM portal for managing employees, roles, and profiles with secure authentication and day-to-day CRUD workflows.",
+    image: "/images/projects/employe.png",
+    imageUnoptimized: true,
+    github: "https://github.com/SAFAR1119/EMS",
+    live: "https://ems-eyo.vercel.app/login",
+    tech: ["Next.js", "NestJS", "MySQL", "JWT", "TypeORM"],
+    status: "Completed",
+  },
+  {
+    title: "Mango Online Shop — Ecommerce",
+    featured: true,
+    description:
+      "A responsive online shopping experience for exploring products, viewing item details, and moving through a simple, polished storefront.",
+    image: "/images/projects/mango.png",
+    github: "https://github.com/SAFAR1119/Mango-OnlineShop",
+    live: "https://mango-online-shop.vercel.app/",
+    tech: ["E-commerce", "Product Catalog", "Responsive UI"],
+    status: "Completed",
+  },
+  {
     title: "Portfolio Website",
     featured: true,
-
     description:
-      "A modern, responsive portfolio built with Next.js 16, TypeScript and Tailwind CSS. Designed to showcase my projects, skills and experience.",
-
+      "A responsive personal portfolio built to present selected work, technical skills, and professional experience in one focused place.",
     image: "/images/projects/portfolio.png",
-
     github: "https://github.com/SAFAR1119/Portfolio",
-
-    live: "https://YOUR-VERCEL-LINK.vercel.app",
-
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
+    live: "https://portfolio-safarahmed.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     status: "Completed",
   },
-
-  {
-    title: "Employee Management System",
-    featured: true,
-
-    description:
-      "A full-stack employee management system with authentication, role-based access control, profile management and CRUD functionality.",
-
-    image: "/images/projects/employee.png",
-
-    github: "https://github.com/SAFAR1119/EMS",
-
-    live: "",
-
-    tech: [
-      "Next.js",
-      "NestJS",
-      "MySQL",
-      "JWT",
-      "TypeORM",
-    ],
-    status: "Completed",
-  },
-
   {
     title: "Bajar Mart",
-
     featured: true,
-
     description:
-      "Developed a full-stack e-commerce web application using Spring Boot for the backend and Thymeleaf with CSS for the frontend to manage product listings and customer shopping activities. Implemented service-layer logic using OOPprinciples in Java, ensuring modularity andreusability.",
-
+      "A full-stack e-commerce application for managing products and customer shopping activity, built with a Java Spring Boot backend and a server-rendered frontend.",
     image: "/images/projects/mart.png",
-
     github: "https://github.com/SAFAR1119/bajarbd-family-mart",
-
     live: "",
-
-    tech: [
-      "Spring Boot",
-      "Thyemeleaf",
-    ],
+    tech: ["Spring Boot", "Thymeleaf", "Java", "CSS"],
     status: "Completed",
   },
-
   {
-  title: "More Projects Coming Soon",
-  featured: false,
-  status: "Coming Soon",
-
-  description:
-    "I'm continuously building new applications and experimenting with modern technologies. More exciting projects will be added here soon.",
-
-  image: "/images/projects/coming-soon.png",
-
-  github: "",
-
-  live: "",
-
-  tech: [
-    "Future",
-    "Innovation",
-    "Learning",
-  ],
-},
+    title: "More Projects Coming Soon",
+    featured: false,
+    status: "Coming Soon",
+    description:
+      "I'm continuously building new applications and experimenting with modern technologies. More work will be added here soon.",
+    image: "/images/projects/coming-soon.png",
+    github: "",
+    live: "",
+    tech: ["Future", "Innovation", "Learning"],
+  },
 ];

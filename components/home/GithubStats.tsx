@@ -1,83 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const username = "SAFAR1119";
 
 export default function GithubStats() {
   return (
-    <section
-      id="github"
-      className="relative overflow-hidden py-32"
-    >
-      {/* Background Glow */}
-      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
+    <section id="github" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 sm:py-32">
+      <div className="grid gap-10 md:grid-cols-[.8fr_1.2fr] md:items-start">
+        <div>
+          <p className="eyebrow">Open source</p>
+          <h2 className="section-title mt-4">Work in<br />progress.</h2>
+          <p className="mt-7 max-w-sm leading-7" style={{ color: "var(--muted)" }}>I keep project code, experiments, and the occasional unfinished idea on GitHub.</p>
+          <Link href={`https://github.com/${username}`} target="_blank" className="mt-8 inline-flex items-center gap-2 border-b-2 pb-1 font-semibold" style={{ borderColor: "var(--accent)" }}>
+            <FaGithub /> Visit my GitHub <ArrowUpRight size={16} />
+          </Link>
+        </div>
 
-      <div className="mx-auto max-w-7xl px-6">
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <p className="font-semibold uppercase tracking-[0.25em] text-blue-500">
-            GitHub
-          </p>
-
-          <h2 className="mt-3 text-5xl font-black">
-            Development Activity
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-zinc-500">
-            My GitHub activity updates automatically as I build and publish new projects.
-          </p>
-        </motion.div>
-
-        <div className="mt-20 grid gap-8 lg:grid-cols-2">
-
-          {/* GitHub Stats */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
-          >
-            <img
-              src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=transparent&hide_border=true`}
-              alt="GitHub Stats"
-              className="w-full rounded-xl"
-            />
-          </motion.div>
-
-          {/* Languages */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
-          >
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=transparent&hide_border=true`}
-              alt="Top Languages"
-              className="w-full rounded-xl"
-            />
-          </motion.div>
-
-          {/* Streak */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl lg:col-span-2"
-          >
-            <img
-              src={`https://streak-stats.demolab.com?user=${username}&theme=transparent&hide_border=true`}
-              alt="GitHub Streak"
-              className="w-full rounded-xl"
-            />
-          </motion.div>
-
+        <div className="border-y" style={{ borderColor: "var(--line)" }}>
+          <div className="grid gap-5 border-b py-6 sm:grid-cols-[140px_1fr]" style={{ borderColor: "var(--line)" }}>
+            <p className="font-serif text-2xl">Overview</p>
+            <img src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=transparent&hide_border=true&text_color=686761&title_color=c84d2f&icon_color=c84d2f`} alt="GitHub contribution overview" className="w-full max-w-md" />
+          </div>
+          <div className="grid gap-5 py-6 sm:grid-cols-[140px_1fr]">
+            <p className="font-serif text-2xl">Languages</p>
+            <img src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=transparent&hide_border=true&text_color=686761&title_color=c84d2f`} alt="Most used programming languages" className="w-full max-w-md" />
+          </div>
         </div>
       </div>
     </section>
