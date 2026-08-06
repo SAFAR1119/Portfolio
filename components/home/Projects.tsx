@@ -31,7 +31,7 @@ export default function Projects() {
                 </div>
               </div>
               <div className="relative overflow-hidden border" style={{ borderColor: "var(--line)" }}>
-                {project.image ? <Image src={project.image} alt={`${project.title} screenshot`} width={900} height={600} unoptimized={project.imageUnoptimized} className="aspect-[16/10] h-full w-full object-cover object-top transition duration-500 hover:scale-[1.025]" /> : <div className="aspect-[16/10]" />}
+                {project.image ? <Image src={project.image} alt={`${project.title} screenshot`} width={900} height={600} unoptimized={project.imageUnoptimized} className="aspect-16/10 h-full w-full object-cover object-top transition duration-500 hover:scale-[1.025]" /> : <div className="aspect-16/10" />}
               </div>
             </article>
           ))}

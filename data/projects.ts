@@ -34,14 +34,14 @@ export const projects = [
     status: "Completed",
   },
   {
-    title: "Bajar Mart",
+    title: "BajarBD Family Mart",
     featured: true,
     description:
       "A full-stack e-commerce application for managing products and customer shopping activity, built with a Java Spring Boot backend and a server-rendered frontend.",
     image: "/images/projects/mart.png",
     github: "https://github.com/SAFAR1119/bajarbd-family-mart",
-    live: "",
-    tech: ["Spring Boot", "Thymeleaf", "Java", "CSS"],
+    live: "https://bajarbd-family-mart.vercel.app/",
+    tech: ["Spring Boot", "Thymeleaf", "Java", "CSS", "HTML"],
     status: "Completed",
   },
   {
